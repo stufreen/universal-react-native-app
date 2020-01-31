@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, ScrollView, Text, TouchableOpacity, StyleSheet, SafeAreaView} from 'react-native'
+import {View, ScrollView, Text, TouchableOpacity, StyleSheet, SafeAreaView, Image} from 'react-native'
 
 export default function App () {
   const [count, setCount] = React.useState(0)
@@ -12,6 +12,7 @@ export default function App () {
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <SafeAreaView>
         <Text style={styles.text}>Hello Compass!</Text>
+        <Image style={styles.image} source={require('./assets/shopify.png')} resizeMode="contain" />
         <Text style={styles.text}>The count is {count}</Text>
         <TouchableOpacity onPress={onPressIncrement}>
           <View style={styles.button}>
@@ -31,6 +32,10 @@ const styles = StyleSheet.create({
     height: 2000,
     backgroundColor: '#112233',
     padding: 20,
+  },
+  image: {
+    width: 100,
+    height: 100,
   },
   text: {
     color: 'white',
