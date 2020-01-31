@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, ScrollView, Text, TouchableOpacity, StyleSheet} from 'react-native'
+import {View, ScrollView, Text, TouchableOpacity, StyleSheet, SafeAreaView} from 'react-native'
 
 export default function App () {
   const [count, setCount] = React.useState(0)
@@ -10,13 +10,15 @@ export default function App () {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <Text style={styles.text}>Hello world!</Text>
-      <Text style={styles.text}>The count is {count}</Text>
-      <TouchableOpacity onPress={onPressIncrement}>
-        <View style={styles.button}>
-          <Text style={styles.text}>Increment</Text>
-        </View>
-      </TouchableOpacity>
+      <SafeAreaView>
+        <Text style={styles.text}>Hello Compass!</Text>
+        <Text style={styles.text}>The count is {count}</Text>
+        <TouchableOpacity onPress={onPressIncrement}>
+          <View style={styles.button}>
+            <Text style={styles.text}>Increment</Text>
+          </View>
+        </TouchableOpacity>
+      </SafeAreaView>
     </ScrollView>
   )
 }
