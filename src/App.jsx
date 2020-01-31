@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     height: 2000,
     backgroundColor: '#112233',
     padding: 20,
-    alignItems: 'flex-start'
   },
   text: {
     color: 'white',
@@ -42,5 +41,6 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 5,
     marginTop: 20,
+    alignSelf: 'flex-start'
   }
 })
